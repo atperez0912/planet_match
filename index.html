@@ -9,23 +9,31 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
   <body>
+
+</div>
     <div class="navbar">
       <h1>OuterSpace Match</h1>
+
     </div>
     <div class="game-area">
       <div class="stats">
         <div class="games-played">
-          <p>Games Played</p>
-          <p class="number-played"></p>
+          <p class="games-played">Games Played</p>
+          <p class="value"></p>
         </div>
         <div class="accuracy">
-          <p>Accuracy</p>
-          <p class="accuracy-score"></p>
+          <p class="accuracy">Accuracy</p>
+          <p class="value"></p>
+        </div>
+        <div class="attempts">
+          <p class="attempts">attempts</p>
+          <p class="value"></p>
         </div>
         <button type="button" name="button">New Game</button>
+        <button class="btn" data-popup-open="popup-1" href="#">How To Play</button>
       </div>
       <div class="card-container">
-        <div class="card" class="jupiter" >
+        <div class="card" class="jupiter" onclickstart="this.classList.toggle('click');" >
             <img src="images/jupiter.jpg" alt="jupiter" class="front">
             <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
@@ -99,5 +107,19 @@
         </div>
       </div>
     </div>
+    <!-- modal -->
+  <footer>
+    <!-- <a class="btn" data-popup-open="popup-1" href="#">Open Popup #1</a> -->
+
+   <div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+        <h2>How To Play</h2>
+        <p>Match all of the planets plus the moon to win the galaxy!</p>
+        <p><a data-popup-close="popup-1" href="#">Close</a></p>
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+    </div>
+  </div>
+ </footer>
+<!-- modal -->
   </body>
 </html>
