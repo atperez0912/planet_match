@@ -1,7 +1,23 @@
 $(document).ready(function (){
+    display_instructions();
     randomize_cards();
     $('.card').on('click', cardClicked);
     $('button').on('click', resetGame);
+    // modal
+    $('[data-popup-open]').on('click', function(e)  {
+       var targeted_popup_class = jQuery(this).attr('data-popup-open');
+       $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+       e.preventDefault();
+   });
+
+   //----- CLOSE
+   $('[data-popup-close]').on('click', function(e)  {
+       var targeted_popup_class = jQuery(this).attr('data-popup-close');
+       $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+       e.preventDefault();
+   });
 });
 
 var first_card_clicked = null;
@@ -12,7 +28,9 @@ var matches = 0;
 var attempts = 0;
 var accuracy = null;
 var games_played = 0;
+function display_instructions(){
 
+}
 function randomize_cards(){
   var parent = $('.card-container');
   var cards = parent.children();
@@ -54,7 +72,7 @@ function cardClicked() {
 function display_stats(){
     $('.games-played .value').text(games_played);
     $('.attempts .value').text(attempts);
-    $('.accuracy .value').text(accuracy);
+    $('.accuracy .value').text(accuracy+"%");
 }
 
 function reset_stats() {
@@ -62,6 +80,7 @@ function reset_stats() {
     matches = 0;
     attempts = 0;
     display_stats();
+    randomize_cards();
 }
 
 function resetGame() {
