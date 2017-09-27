@@ -26,19 +26,20 @@
           <p class="value"></p>
         </div>
         <div class="attempts">
-          <p class="attempts">attempts</p>
+          <p class="attempts">Attempts</p>
           <p class="value"></p>
         </div>
-        <button type="button" name="button">New Game</button>
-        <button class="btn" data-popup-open="popup-1" href="#">How To Play</button>
+        <button class="new" type="button" name="button">New Game</button>
+        <button class="btn" data-popup-open="popup-1">How To Play</button>
+        <button class="hide" data-popup-win="popup-2">win</button>
       </div>
       <div class="card-container">
         <div class="card" class="jupiter" onclickstart="this.classList.toggle('click');" >
-            <img src="images/jupiter.jpg" alt="jupiter" class="front">
+            <img src="images/jupiter.jpg" alt="jupiter" class="front" card="one">
             <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
         <div class="card" class="jupiter">
-          <img src="images/jupiter.jpg" alt="jupiter.jpg" class="front">
+          <img src="images/jupiter.jpg" alt="jupiter.jpg" class="front" card="two">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
         <div class="card" class="saturn">
@@ -61,23 +62,23 @@
           <img src="images/uranus.jpg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
-        <div class="card" class="uranus">
+        <div class="card" class="uranus two">
           <img src="images/uranus.jpg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
-        <div class="card" class="mars">
+        <div class="card" class="mars one">
           <img src="images/mars.jpeg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
-        <div class="card" class="mars">
+        <div class="card" class="mars two">
           <img src="images/mars.jpeg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
-        <div class="card" class="neptune">
+        <div class="card" class="neptune one">
           <img src="images/neptune.jpg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
-        <div class="card" class="neptune">
+        <div class="card" class="neptune two">
           <img src="images/neptune.jpg" alt="jupiter" class="front">
           <img src="images/astronaut.jpg" alt="astronaut" class="back">
         </div>
@@ -119,6 +120,14 @@
         <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
     </div>
   </div>
+  <div class="popup" data-popup="popup-2">
+   <div class="popup-inner win">
+       <h2>Out of this World!!!!!</h2>
+       <button type="button" name="reset_game">New Game</button>
+       <p><a data-popup-close="popup-2" href="#">Close</a></p>
+       <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+   </div>
+ </div>
  </footer>
 <!-- modal -->
   </body>

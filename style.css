@@ -6,9 +6,6 @@ body {
   font-family: 'Orbitron', sans-serif;
   height: 100vh;
 }
-.card {
-  perspective: 100%;
-}
 
 .navbar {
   width: 100vw;
@@ -18,20 +15,22 @@ body {
   font-size: 1.5em;
 }
 h1 {
-  display: inline-block;
+  display: block;
   padding: 2%;
 }
+
 p {
   color: #f05b4f;
-  margin: 15%;
+  margin: 28% 0%;
 }
 button {
+  display: inline-block;
   height: 36px;
   min-width: 54px;
   font-family: 'Orbitron', sans-serif;
   color: #757575;
   font-size: 13px;
-  margin: 11px 4px;
+  margin: 6px 32px;
   padding:0 16px;
   background-color:rgb(241,241,241);
   text-decoration: none;
@@ -76,7 +75,12 @@ img, .front, .back{
 }
 .hidden {
   display: none;
+
 }
+.hide {
+  display: none;
+}
+
 /*modal*/
 /* Outer */
 .popup {
@@ -93,6 +97,7 @@ img, .front, .back{
 .popup-inner {
     max-width:700px;
     width:90%;
+    height: 50%;
     padding:40px;
     position:absolute;
     top:50%;
@@ -103,6 +108,18 @@ img, .front, .back{
     border-radius:3px;
     background:#fff;
 }
+.win {
+  background-image: url(images/rocket.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.win > h2 {
+  display: block;
+  text-align: center;
+  font-size: 2em;
+}
+
 
 /* Close Button */
 .popup-close {
@@ -132,3 +149,6 @@ img, .front, .back{
     text-decoration:none;
 }
 /*modal*/
+.click_remove {
+  pointer-events: none;
+}
